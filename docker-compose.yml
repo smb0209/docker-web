@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  ssh:
+    build: ./build/ssh
+    ports:
+      - "20022:22"
+    networks:
+      - a_default
+
+  nginx:
+    build: ./build/nginx
+    volumes:
+      - "./build/nginx/conf:/etc/nginx/tmp/conf"
+    ports:
+      - "80:80"
+      - "28081:28081"
+      - "443:443"
+    links:
+      - phpmyadmin
+    networks:
+      - a_default
+
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - a_default
+
+networks:
+  a_default:
+    external: true

@@ -1,0 +1,4 @@
+/.idea/
+/build/ssh/id_rsa.pub
+/build/ssh/ssh_host_dsa_key
+/build/ssh/ssh_host_rsa_key
