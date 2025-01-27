@@ -1,5 +1,6 @@
 # 최초 세팅 방법<br/>How to start
 
+### You need the docker first.(https://www.docker.com/)
 1. nginx
    1. localhost:80 포트로 들어오는 모든 경우를 감지 및 포워딩<br/>This container forwards all from localhost:80 to other container.
    2. phpmyadmin ( mysql 편의를 위해 ) 포함.<br/>phpmyadmin container is just for convenient connection.
